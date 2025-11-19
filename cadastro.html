@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cadastre-se como voluntário ou registre sua ONG na plataforma Conecta ONGs">
+    <meta name="keywords" content="cadastro, voluntário, ONG, registro">
+    <title>Cadastro - Conecta ONGs</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <span>❤️</span> Conecta ONGs
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="index.html#sobre">Sobre</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero hero-small">
+            <div class="container">
+                <h1>Cadastro de Voluntário</h1>
+                <p>Preencha o formulário abaixo e comece sua jornada de transformação social</p>
+            </div>
+        </section>
+
+        <!-- Formulário de Cadastro -->
+        <section class="section">
+            <div class="container">
+                <div class="form-container">
+                    <form id="volunteerForm" class="registration-form" novalidate>
+                        <!-- Dados Pessoais -->
+                        <fieldset class="form-fieldset">
+                            <legend>Dados Pessoais</legend>
+
+                            <div class="form-group">
+                                <label for="nome">Nome Completo <span class="required">*</span></label>
+                                <input 
+                                    type="text" 
+                                    id="nome" 
+                                    name="nome" 
+                                    required 
+                                    minlength="3"
+                                    maxlength="100"
+                                    placeholder="Digite seu nome completo"
+                                    aria-required="true"
+                                    aria-describedby="nomeHelp">
+                                <small id="nomeHelp" class="form-help">Informe seu nome completo como está no documento</small>
+                                <span class="error-message" id="nomeError"></span>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">E-mail <span class="required">*</span></label>
+                                    <input 
+                                        type="email" 
+                                        id="email" 
+                                        name="email" 
+                                        required
+                                        placeholder="seu@email.com"
+                                        aria-required="true"
+                                        aria-describedby="emailHelp">
+                                    <small id="emailHelp" class="form-help">Usaremos este e-mail para contato</small>
+                                    <span class="error-message" id="emailError"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="telefone">Telefone <span class="required">*</span></label>
+                                    <input 
+                                        type="tel" 
+                                        id="telefone" 
+                                        name="telefone" 
+                                        required
+                                        placeholder="(00) 00000-0000"
+                                        maxlength="15"
+                                        pattern="\(\d{2}\) \d{4,5}-\d{4}"
+                                        aria-required="true"
+                                        aria-describedby="telefoneHelp">
+                                    <small id="telefoneHelp" class="form-help">Formato: (00) 00000-0000</small>
+                                    <span class="error-message" id="telefoneError"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="cpf">CPF <span class="required">*</span></label>
+                                    <input 
+                                        type="text" 
+                                        id="cpf" 
+                                        name="cpf" 
+                                        required
+                                        placeholder="000.000.000-00"
+                                        maxlength="14"
+                                        pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                                        aria-required="true"
+                                        aria-describedby="cpfHelp">
+                                    <small id="cpfHelp" class="form-help">Formato: 000.000.000-00</small>
+                                    <span class="error-message" id="cpfError"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="dataNascimento">Data de Nascimento <span class="required">*</span></label>
+                                    <input 
+                                        type="date" 
+                                        id="dataNascimento" 
+                                        name="dataNascimento" 
+                                        required
+                                        min="1924-01-01"
+                                        max="2007-12-31"
+                                        aria-required="true"
+                                        aria-describedby="dataNascimentoHelp">
+                                    <small id="dataNascimentoHelp" class="form-help">Você deve ter entre 18 e 100 anos</small>
+                                    <span class="error-message" id="dataNascimentoError"></span>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <!-- Endereço -->
+                        <fieldset class="form-fieldset">
+                            <legend>Endereço</legend>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="cep">CEP <span class="required">*</span></label>
+                                    <input 
+                                        type="text" 
+                                        id="cep" 
+                                        name="cep" 
+                                        required
+                                        placeholder="00000-000"
+                                        maxlength="9"
+                                        pattern="\d{5}-\d{3}"
+                                        aria-required="true"
+                                        aria-describedby="cepHelp">
+                                    <small id="cepHelp" class="form-help">Formato: 00000-000</small>
+                                    <span class="error-message" id="cepError"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="endereco">Endereço <span class="required">*</span></label>
+                                    <input 
+                                        type="text" 
+                                        id="endereco" 
+                                        name="endereco" 
+                                        required
+                                        minlength="5"
+                                        maxlength="100"
+                                        placeholder="Rua, Avenida, etc."
+                                        aria-required="true">
+                                    <span class="error-message" id="enderecoError"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="numero">Número</label>
+                                    <input 
+                                        type="text" 
+                                        id="numero" 
+                                        name="numero"
+                                        maxlength="10"
+                                        placeholder="000">
+                                    <span class="error-message" id="numeroError"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="complemento">Complemento</label>
+                                    <input 
+                                        type="text" 
+                                        id="complemento" 
+                                        name="complemento"
+                                        maxlength="50"
+                                        placeholder="Apto, Bloco, etc.">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="cidade">Cidade <span class="required">*</span></label>
+                                    <input 
+                                        type="text" 
+                                        id="cidade" 
+                                        name="cidade" 
+                                        required
+                                        minlength="2"
+                                        maxlength="50"
+                                        placeholder="Nome da cidade"
+                                        aria-required="true">
+                                    <span class="error-message" id="cidadeError"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="estado">Estado <span class="required">*</span></label>
+                                    <select 
+                                        id="estado" 
+                                        name="estado" 
+                                        required
+                                        aria-required="true">
+                                        <option value="">Selecione o estado</option>
+                                        <option value="AC">Acre</option>
+                                        <option value="AL">Alagoas</option>
+                                        <option value="AP">Amapá</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="BA">Bahia</option>
+                                        <option value="CE">Ceará</option>
+                                        <option value="DF">Distrito Federal</option>
+                                        <option value="ES">Espírito Santo</option>
+                                        <option value="GO">Goiás</option>
+                                        <option value="MA">Maranhão</option>
+                                        <option value="MT">Mato Grosso</option>
+                                        <option value="MS">Mato Grosso do Sul</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="PA">Pará</option>
+                                        <option value="PB">Paraíba</option>
+                                        <option value="PR">Paraná</option>
+                                        <option value="PE">Pernambuco</option>
+                                        <option value="PI">Piauí</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="RN">Rio Grande do Norte</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="RO">Rondônia</option>
+                                        <option value="RR">Roraima</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="SE">Sergipe</option>
+                                        <option value="TO">Tocantins</option>
+                                    </select>
+                                    <span class="error-message" id="estadoError"></span>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <!-- Informações de Voluntariado -->
+                        <fieldset class="form-fieldset">
+                            <legend>Informações de Voluntariado</legend>
+
+                            <div class="form-group">
+                                <label for="area">Área de Interesse <span class="required">*</span></label>
+                                <select 
+                                    id="area" 
+                                    name="area" 
+                                    required
+                                    aria-required="true"
+                                    aria-describedby="areaHelp">
+                                    <option value="">Selecione uma área</option>
+                                    <option value="educacao">Educação</option>
+                                    <option value="saude">Saúde</option>
+                                    <option value="meio-ambiente">Meio Ambiente</option>
+                                    <option value="animais">Proteção Animal</option>
+                                    <option value="tecnologia">Tecnologia</option>
+                                    <option value="administrativo">Administrativo</option>
+                                    <option value="marketing">Marketing e Comunicação</option>
+                                    <option value="juridico">Jurídico</option>
+                                    <option value="outros">Outros</option>
+                                </select>
+                                <small id="areaHelp" class="form-help">Escolha a área onde deseja atuar</small>
+                                <span class="error-message" id="areaError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="disponibilidade">Disponibilidade <span class="required">*</span></label>
+                                <select 
+                                    id="disponibilidade" 
+                                    name="disponibilidade" 
+                                    required
+                                    aria-required="true">
+                                    <option value="">Selecione</option>
+                                    <option value="manha">Manhã</option>
+                                    <option value="tarde">Tarde</option>
+                                    <option value="noite">Noite</option>
+                                    <option value="fins-de-semana">Finais de semana</option>
+                                    <option value="flexivel">Horários flexíveis</option>
+                                </select>
+                                <span class="error-message" id="disponibilidadeError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="experiencia">Experiência Anterior</label>
+                                <select id="experiencia" name="experiencia">
+                                    <option value="">Selecione</option>
+                                    <option value="nenhuma">Nenhuma experiência</option>
+                                    <option value="menos-1-ano">Menos de 1 ano</option>
+                                    <option value="1-3-anos">1 a 3 anos</option>
+                                    <option value="mais-3-anos">Mais de 3 anos</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="motivacao">Por que você quer ser voluntário? <span class="required">*</span></label>
+                                <textarea 
+                                    id="motivacao" 
+                                    name="motivacao" 
+                                    required
+                                    minlength="50"
+                                    maxlength="500"
+                                    rows="5"
+                                    placeholder="Conte-nos sobre sua motivação para ser voluntário..."
+                                    aria-required="true"
+                                    aria-describedby="motivacaoHelp"></textarea>
+                                <small id="motivacaoHelp" class="form-help">Mínimo de 50 caracteres</small>
+                                <span class="error-message" id="motivacaoError"></span>
+                                <div class="char-counter">
+                                    <span id="charCount">0</span>/500 caracteres
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <!-- Termos e Condições -->
+                        <fieldset class="form-fieldset">
+                            <legend>Termos e Condições</legend>
+
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input 
+                                        type="checkbox" 
+                                        id="termos" 
+                                        name="termos" 
+                                        required
+                                        aria-required="true">
+                                    <span>Li e aceito os <a href="#" target="_blank">termos de uso</a> e a <a href="#" target="_blank">política de privacidade</a> <span class="required">*</span></span>
+                                </label>
+                                <span class="error-message" id="termosError"></span>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input 
+                                        type="checkbox" 
+                                        id="newsletter" 
+                                        name="newsletter">
+                                    <span>Aceito receber informações sobre novos projetos e oportunidades de voluntariado</span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <!-- Botões -->
+                        <div class="form-actions">
+                            <button type="reset" class="btn btn-secondary">Limpar Formulário</button>
+                            <button type="submit" class="btn btn-primary">Cadastrar</button>
+                        </div>
+
+                        <p class="form-note">
+                            <span class="required">*</span> Campos obrigatórios
+                        </p>
+                    </form>
+
+                    <!-- Mensagem de Sucesso -->
+                    <div id="successMessage" class="success-message hidden">
+                        <div class="success-icon">✓</div>
+                        <h3>Cadastro realizado com sucesso!</h3>
+                        <p>Obrigado por se cadastrar como voluntário. Entraremos em contato em breve com as próximas etapas.</p>
+                        <button onclick="resetForm()" class="btn btn-primary">Fazer novo cadastro</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Informações Adicionais -->
+        <section class="section info-section">
+            <div class="container">
+                <header class="section-header">
+                    <h2>Próximos Passos</h2>
+                    <p>O que acontece após o cadastro</p>
+                </header>
+
+                <div class="steps-grid">
+                    <article class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Análise do Cadastro</h3>
+                        <p>Nossa equipe analisará suas informações em até 48 horas úteis.</p>
+                    </article>
+                    <article class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Confirmação por E-mail</h3>
+                        <p>Você receberá um e-mail de confirmação com instruções detalhadas.</p>
+                    </article>
+                    <article class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>Match com Projetos</h3>
+                        <p>Conectaremos você com projetos que combinam com seu perfil.</p>
+                    </article>
+                    <article class="step-card">
+                        <div class="step-number">4</div>
+                        <h3>Comece a Voluntariar</h3>
+                        <p>Inicie sua jornada transformando vidas através do voluntariado!</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contato">
+        <div class="container">
+            <div class="footer-content">
+                <section class="footer-section">
+                    <h3>Sobre o Conecta ONGs</h3>
+                    <p>Plataforma completa que conecta organizações não governamentais a pessoas que desejam contribuir para um mundo melhor.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                        <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+                    </div>
+                </section>
+                <section class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <a href="index.html">Início</a>
+                    <a href="projetos.html">Projetos</a>
+                    <a href="cadastro.html">Cadastro</a>
+                    <a href="index.html#sobre">Sobre Nós</a>
+                </section>
+                <section class="footer-section">
+                    <h3>Para ONGs</h3>
+                    <a href="cadastro.html">Cadastre sua ONG</a>
+                    <a href="#">Como Funciona</a>
+                    <a href="#">Recursos</a>
+                    <a href="#">FAQ</a>
+                </section>
+                <section class="footer-section">
+                    <h3>Contato</h3>
+                    <p>📧 <a href="mailto:contato@conectaongs.org.br">contato@conectaongs.org.br</a></p>
+                    <p>📱 <a href="tel:+5511987654321">(11) 98765-4321</a></p>
+                    <p>📍 São Paulo, SP - Brasil</p>
+                    <p>🕐 Seg-Sex: 9h às 18h</p>
+                </section>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Conecta ONGs. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/cadastro.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
