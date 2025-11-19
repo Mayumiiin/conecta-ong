@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça nossos projetos sociais e oportunidades de voluntariado">
+    <meta name="keywords" content="projetos sociais, voluntariado, doações, ONGs">
+    <title>Projetos Sociais e Voluntariado - Conecta ONGs</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <span>❤️</span> Conecta ONGs
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="index.html#sobre">Sobre</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero hero-small">
+            <div class="container">
+                <h1>Projetos Sociais em Destaque</h1>
+                <p>Escolha uma causa e faça parte da transformação social. Cada projeto tem impacto real na vida de comunidades.</p>
+            </div>
+        </section>
+
+        <!-- Projetos -->
+        <section class="section">
+            <div class="container">
+                <header class="section-header">
+                    <h2>Nossos Projetos</h2>
+                    <p>Conheça as iniciativas que estão mudando vidas</p>
+                </header>
+
+                <nav class="filters" aria-label="Filtrar projetos por categoria">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="educacao">Educação</button>
+                    <button class="filter-btn" data-filter="saude">Saúde</button>
+                    <button class="filter-btn" data-filter="meio-ambiente">Meio Ambiente</button>
+                    <button class="filter-btn" data-filter="animais">Animais</button>
+                </nav>
+
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- Projeto 1 -->
+                    <article class="project-card">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=400&fit=crop" alt="Crianças aprendendo informática" class="project-image">
+                        <div class="project-content">
+                            <span class="project-category">educação</span>
+                            <h3 class="project-title">Alfabetização Digital</h3>
+                            <p class="project-ong">por Educação para Todos</p>
+                            <p>Levar conhecimento em tecnologia para comunidades carentes, preparando jovens para o mercado de trabalho digital.</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 65%"></div>
+                            </div>
+                            <div class="project-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value">R$ 32.500</span>
+                                    <span class="stat-label-small">de R$ 50.000</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">45</span>
+                                    <span class="stat-label-small">voluntários</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 2 -->
+                    <article class="project-card">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=400&fit=crop" alt="Atendimento médico" class="project-image">
+                        <div class="project-content">
+                            <span class="project-category">saúde</span>
+                            <h3 class="project-title">Atendimento Médico Gratuito</h3>
+                            <p class="project-ong">por Saúde Solidária</p>
+                            <p>Consultas e exames para população de baixa renda, garantindo acesso à saúde de qualidade.</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 81%"></div>
+                            </div>
+                            <div class="project-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value">R$ 65.000</span>
+                                    <span class="stat-label-small">de R$ 80.000</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">120</span>
+                                    <span class="stat-label-small">voluntários</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 3 -->
+                    <article class="project-card">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&h=400&fit=crop" alt="Plantio de árvores" class="project-image">
+                        <div class="project-content">
+                            <span class="project-category">meio ambiente</span>
+                            <h3 class="project-title">Reflorestamento Urbano</h3>
+                            <p class="project-ong">por Verde Vida</p>
+                            <p>Plantio de árvores nativas em áreas urbanas degradadas, melhorando qualidade do ar e clima.</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 80%"></div>
+                            </div>
+                            <div class="project-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value">R$ 28.000</span>
+                                    <span class="stat-label-small">de R$ 35.000</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">89</span>
+                                    <span class="stat-label-small">voluntários</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 4 -->
+                    <article class="project-card">
+                        <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=800&h=400&fit=crop" alt="Cães resgatados" class="project-image">
+                        <div class="project-content">
+                            <span class="project-category">animais</span>
+                            <h3 class="project-title">Resgate de Animais Abandonados</h3>
+                            <p class="project-ong">por Amigo Fiel</p>
+                            <p>Resgate, tratamento e adoção responsável de animais em situação de rua.</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%"></div>
+                            </div>
+                            <div class="project-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value">R$ 22.500</span>
+                                    <span class="stat-label-small">de R$ 25.000</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">67</span>
+                                    <span class="stat-label-small">voluntários</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 5 -->
+                    <article class="project-card">
+                        <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=800&h=400&fit=crop" alt="Reforço escolar" class="project-image">
+                        <div class="project-content">
+                            <span class="project-category">educação</span>
+                            <h3 class="project-title">Reforço Escolar Comunitário</h3>
+                            <p class="project-ong">por Futuro Brilhante</p>
+                            <p>Aulas de reforço para crianças em situação de vulnerabilidade social.</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 95%"></div>
+                            </div>
+                            <div class="project-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value">R$ 38.000</span>
+                                    <span class="stat-label-small">de R$ 40.000</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">52</span>
+                                    <span class="stat-label-small">voluntários</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 6 -->
+                    <article class="project-card">
+                        <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&h=400&fit=crop" alt="Distribuição de alimentos" class="project-image">
+                        <div class="project-content">
+                            <span class="project-category">saúde</span>
+                            <h3 class="project-title">Alimentação Nutritiva</h3>
+                            <p class="project-ong">por Coração Solidário</p>
+                            <p>Distribuição de refeições saudáveis para pessoas em situação de rua.</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                            <div class="project-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value">R$ 45.000</span>
+                                    <span class="stat-label-small">de R$ 60.000</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">95</span>
+                                    <span class="stat-label-small">voluntários</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Como Doar -->
+        <section class="section donation-info">
+            <div class="container">
+                <header class="section-header">
+                    <h2>Como Fazer Doações</h2>
+                    <p>Sua contribuição transforma vidas - saiba como doar</p>
+                </header>
+
+                <div class="donation-methods">
+                    <article class="method-card">
+                        <div class="method-icon">💳</div>
+                        <h3>Doação Online</h3>
+                        <p>Faça sua doação de forma segura através de cartão de crédito, débito ou PIX. Escolha fazer uma doação única ou mensal.</p>
+                        <ul class="method-steps">
+                            <li>Escolha o projeto que deseja apoiar</li>
+                            <li>Defina o valor da contribuição</li>
+                            <li>Preencha os dados de pagamento</li>
+                            <li>Receba o recibo por e-mail</li>
+                        </ul>
+                    </article>
+
+                    <article class="method-card">
+                        <div class="method-icon">🏦</div>
+                        <h3>Transferência Bancária</h3>
+                        <p>Realize transferência ou depósito bancário diretamente para a ONG escolhida.</p>
+                        <ul class="method-steps">
+                            <li>Entre em contato com a ONG</li>
+                            <li>Solicite os dados bancários</li>
+                            <li>Faça a transferência</li>
+                            <li>Envie o comprovante</li>
+                        </ul>
+                    </article>
+
+                    <article class="method-card">
+                        <div class="method-icon">📦</div>
+                        <h3>Doação de Bens</h3>
+                        <p>Doe roupas, alimentos, materiais escolares e outros itens necessários.</p>
+                        <ul class="method-steps">
+                            <li>Verifique as necessidades da ONG</li>
+                            <li>Prepare os itens para doação</li>
+                            <li>Agende a entrega</li>
+                            <li>Contribua presencialmente</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem;">
+                    <p class="donation-note">💡 <strong>Importante:</strong> Todas as doações podem ser deduzidas no Imposto de Renda. Guarde seus comprovantes!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Oportunidades de Voluntariado -->
+        <section class="volunteer-opportunities section">
+            <div class="container">
+                <header class="section-header">
+                    <h2>Oportunidades de Voluntariado</h2>
+                    <p>Encontre a oportunidade perfeita para contribuir com seu tempo e talento</p>
+                </header>
+
+                <div class="opportunities-grid">
+                    <!-- Oportunidade 1 -->
+                    <article class="opportunity-card">
+                        <div class="opportunity-header">
+                            <h3 class="opportunity-title">Professor Voluntário</h3>
+                            <span class="badge badge-urgent">URGENTE</span>
+                        </div>
+                        <p class="project-ong">Educação para Todos</p>
+                        <div class="opportunity-info">
+                            <div class="info-item">📍 São Paulo, SP</div>
+                            <div class="info-item">🕐 4 horas/semana</div>
+                            <div class="info-item">💼 Presencial</div>
+                        </div>
+                        <p class="opportunity-description">Ensine informática básica para jovens em comunidades carentes.</p>
+                        <a href="cadastro.html" class="btn btn-primary" style="width: 100%; margin-top: 1rem; text-align: center;">Candidatar-se</a>
+                    </article>
+
+                    <!-- Oportunidade 2 -->
+                    <article class="opportunity-card">
+                        <div class="opportunity-header">
+                            <h3 class="opportunity-title">Assistente de Enfermagem</h3>
+                            <span class="badge badge-new">NOVO</span>
+                        </div>
+                        <p class="project-ong">Saúde Solidária</p>
+                        <div class="opportunity-info">
+                            <div class="info-item">📍 Rio de Janeiro, RJ</div>
+                            <div class="info-item">🕐 6 horas/semana</div>
+                            <div class="info-item">💼 Presencial</div>
+                        </div>
+                        <p class="opportunity-description">Auxilie em atendimentos médicos para comunidades carentes.</p>
+                        <a href="cadastro.html" class="btn btn-primary" style="width: 100%; margin-top: 1rem; text-align: center;">Candidatar-se</a>
+                    </article>
+
+                    <!-- Oportunidade 3 -->
+                    <article class="opportunity-card">
+                        <div class="opportunity-header">
+                            <h3 class="opportunity-title">Plantio de Mudas</h3>
+                            <span class="badge badge-new">NOVO</span>
+                        </div>
+                        <p class="project-ong">Verde Vida</p>
+                        <div class="opportunity-info">
+                            <div class="info-item">📍 Curitiba, PR</div>
+                            <div class="info-item">🕐 Finais de semana</div>
+                            <div class="info-item">💼 Presencial</div>
+                        </div>
+                        <p class="opportunity-description">Participe de mutirões de plantio de árvores nativas.</p>
+                        <a href="cadastro.html" class="btn btn-primary" style="width: 100%; margin-top: 1rem; text-align: center;">Candidatar-se</a>
+                    </article>
+
+                    <!-- Oportunidade 4 -->
+                    <article class="opportunity-card">
+                        <div class="opportunity-header">
+                            <h3 class="opportunity-title">Cuidador de Animais</h3>
+                            <span class="badge badge-urgent">URGENTE</span>
+                        </div>
+                        <p class="project-ong">Amigo Fiel</p>
+                        <div class="opportunity-info">
+                            <div class="info-item">📍 Belo Horizonte, MG</div>
+                            <div class="info-item">🕐 3 horas/dia</div>
+                            <div class="info-item">💼 Presencial</div>
+                        </div>
+                        <p class="opportunity-description">Cuide de animais resgatados enquanto aguardam adoção.</p>
+                        <a href="cadastro.html" class="btn btn-primary" style="width: 100%; margin-top: 1rem; text-align: center;">Candidatar-se</a>
+                    </article>
+
+                    <!-- Oportunidade 5 -->
+                    <article class="opportunity-card">
+                        <div class="opportunity-header">
+                            <h3 class="opportunity-title">Designer Gráfico</h3>
+                            <span class="badge badge-new">NOVO</span>
+                        </div>
+                        <p class="project-ong">Futuro Brilhante</p>
+                        <div class="opportunity-info">
+                            <div class="info-item">📍 Remoto</div>
+                            <div class="info-item">🕐 Flexível</div>
+                            <div class="info-item">💼 Remoto</div>
+                        </div>
+                        <p class="opportunity-description">Crie materiais visuais para divulgação de projetos sociais.</p>
+                        <a href="cadastro.html" class="btn btn-primary" style="width: 100%; margin-top: 1rem; text-align: center;">Candidatar-se</a>
+                    </article>
+
+                    <!-- Oportunidade 6 -->
+                    <article class="opportunity-card">
+                        <div class="opportunity-header">
+                            <h3 class="opportunity-title">Preparador de Refeições</h3>
+                            <span class="badge badge-new">NOVO</span>
+                        </div>
+                        <p class="project-ong">Coração Solidário</p>
+                        <div class="opportunity-info">
+                            <div class="info-item">📍 Porto Alegre, RS</div>
+                            <div class="info-item">🕐 5 horas/semana</div>
+                            <div class="info-item">💼 Presencial</div>
+                        </div>
+                        <p class="opportunity-description">Ajude a preparar refeições nutritivas para distribuição.</p>
+                        <a href="cadastro.html" class="btn btn-primary" style="width: 100%; margin-top: 1rem; text-align: center;">Candidatar-se</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Pronto para fazer a diferença?</h2>
+                <p>Cadastre-se como voluntário ou faça uma doação e ajude a transformar vidas hoje mesmo.</p>
+                <div class="hero-buttons">
+                    <a href="cadastro.html" class="btn btn-primary">Cadastre-se Agora</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contato">
+        <div class="container">
+            <div class="footer-content">
+                <section class="footer-section">
+                    <h3>Sobre o Conecta ONGs</h3>
+                    <p>Plataforma completa que conecta organizações não governamentais a pessoas que desejam contribuir para um mundo melhor.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                        <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+                    </div>
+                </section>
+                <section class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <a href="index.html">Início</a>
+                    <a href="projetos.html">Projetos</a>
+                    <a href="cadastro.html">Cadastro</a>
+                    <a href="index.html#sobre">Sobre Nós</a>
+                </section>
+                <section class="footer-section">
+                    <h3>Para ONGs</h3>
+                    <a href="cadastro.html">Cadastre sua ONG</a>
+                    <a href="#">Como Funciona</a>
+                    <a href="#">Recursos</a>
+                    <a href="#">FAQ</a>
+                </section>
+                <section class="footer-section">
+                    <h3>Contato</h3>
+                    <p>📧 <a href="mailto:contato@conectaongs.org.br">contato@conectaongs.org.br</a></p>
+                    <p>📱 <a href="tel:+5511987654321">(11) 98765-4321</a></p>
+                    <p>📍 São Paulo, SP - Brasil</p>
+                    <p>🕐 Seg-Sex: 9h às 18h</p>
+                </section>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Conecta ONGs. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
