@@ -112,28 +112,6 @@ Esta realidade apresenta uma oportunidade única para aplicar conhecimentos de d
 - 🔍 SEO (Meta tags, estrutura semântica)
 - 🎯 Progressive Enhancement
 
----
-
-## 📁 Estrutura do Projeto
-
-```
-conecta-ongs/
-│
-├── index.html              # Página inicial
-├── projetos.html           # Página de projetos e voluntariado
-├── cadastro.html           # Página de cadastro
-├── styles.css              # Estilos globais
-├── script.js               # Scripts JavaScript
-├── README.md               # Este arquivo
-│
-├── assets/
-│   ├── images/            # Imagens do projeto
-│   └── icons/             # Ícones e logos
-│
-└── docs/
-    ├── requisitos.md      # Requisitos do projeto
-    └── personas.md        # Personas e casos de uso
-```
 
 ---
 
